@@ -1,6 +1,7 @@
 {
   "name": "saas-boilerplate-app",
   "version": "0.1.0",
+  "description": "A boilerplate for SaaS applications",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,15 +10,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^4.29.12",
+    "next": "^14.1.4",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.1.4"
+    "react-dom": "^18"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.12",
     "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
+    "daisyui": "^4.10.1",
     "eslint": "^8",
-    "eslint-config-next": "14.1.4"
+    "eslint-config-next": "14.1.4",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0"
   }
 }
