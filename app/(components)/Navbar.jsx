@@ -8,7 +8,7 @@ const Navbar = async () => {
   const isAuth = !!userId;
 
   return (
-    <div className="navbar bg-base-300 px-6 lg:px-24">
+    <div className="navbar bg-base-100 px-6 lg:px-24">
       <div className="navbar-start">
         {/* Mobile view */}
         <div className="dropdown">
@@ -65,7 +65,9 @@ const Navbar = async () => {
         <Link href="/" className="font-semibold pl-2 lg:p-0">
           {/* display the Image: saas-icon.png if screen is smaller than large */}
           <div className="hidden lg:flex">
-            <span className="text-lg text-primary">SaaS Boilerplate</span>
+            <span className="text-lg text-white font-semibold">
+              SaaS Boilerplate
+            </span>
           </div>
           <div className="lg:hidden">
             <Image

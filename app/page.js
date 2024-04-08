@@ -13,7 +13,7 @@ export default function Home() {
       {user.user ? (
         <>
           <div>
-            <h1 className="text-4xl font-bold mb-8">
+            <h1 className="text-3xl font-bold mb-8">
               Welcome back,{' '}
               {user.user.firstName ||
                 user.user.username.slice(0, 1).toUpperCase() +
@@ -27,7 +27,7 @@ export default function Home() {
         </>
       ) : (
         <>
-          <h1 className="text-4xl font-bold mb-8">SaaS App Boilerplate</h1>
+          <h1 className="text-3xl font-bold mb-8">SaaS App Boilerplate</h1>
 
           <p className="mb-8">
             This is a boilerplate application for building a SaaS application

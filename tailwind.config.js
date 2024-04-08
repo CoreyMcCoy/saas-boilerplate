@@ -5,7 +5,14 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  theme: {},
+  theme: {
+    extend: {
+      colors: {
+        brandPrimary: '#103FEF',
+        brandAccent: '#FF990A',
+      },
+    },
+  },
   plugins: [require('@tailwindcss/typography'), require('daisyui')],
 
   daisyui: {

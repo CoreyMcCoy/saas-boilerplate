@@ -13,10 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
-      <html data-theme="light" lang="en">
+      <html data-theme="dark" lang="en">
         <body className={inter.className}>
           <ClerkLoading>
-            <h1 className="text-3xl mt-20 font-bold text-center mx-auto">
+            <h1 className="text-2xl mt-20 font-bold text-center mx-auto">
               Loading...
             </h1>
           </ClerkLoading>

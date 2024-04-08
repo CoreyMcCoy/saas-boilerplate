@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 const PricingPage = () => {
   return (
-    <div>
+    <>
       <div className="md:w-4/6 mx-auto">
-        <h1 className="text-4xl font-bold mb-8 ">Pricing</h1>
+        <h1 className="text-3xl font-bold mb-8 ">Pricing</h1>
         <p>
           Voluptatem aut, quis molestias iure saepe corrupti architecto sapiente
           voluptatibus nostrum dolores placeat quasi blanditiis reiciendis
@@ -12,18 +12,20 @@ const PricingPage = () => {
         </p>
       </div>
       <section>
-        <div className="mt-12">
+        <div className="mt-8">
           <div className="flex flex-wrap justify-center">
-            <div className="p-4">
-              <div className="p-6 rounded-lg border-2 border-gray-700 flex flex-col relative overflow-hidden">
-                <h2 className="text-sm title-font mb-4 font-medium">STARTER</h2>
-                <h3 className="text-4xl font-semibold pb-4 mb-4 border-b border-gray-700">
+            <div className="p-4 mb-6">
+              <div className="p-6 rounded-lg flex flex-col shadow-2xl bg-white">
+                <h2 className="text-xl text-info-content mb-4 font-medium">
+                  Starter
+                </h2>
+                <h3 className="text-2xl text-info-content font-semibold pb-4 mb-4 border-b border-gray-400">
                   <span>$18</span>
-                  <span className="text-lg ml-1 font-normal text-gray-500">
+                  <span className="text-lg ml-1 font-normal text-gray-600">
                     /one-time
                   </span>
                 </h3>
-                <p className="flex items-center mb-2">
+                <p className="flex items-center mb-2 text-sm text-info-content">
                   <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-700 text-white rounded-full flex-shrink-0">
                     <svg
                       fill="none"
@@ -39,7 +41,7 @@ const PricingPage = () => {
                   </span>
                   Vexillologist pitchfork
                 </p>
-                <p className="flex items-center mb-2">
+                <p className="flex items-center mb-2 text-sm text-info-content">
                   <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-700 text-white rounded-full flex-shrink-0">
                     <svg
                       fill="none"
@@ -55,7 +57,7 @@ const PricingPage = () => {
                   </span>
                   Tumeric plaid portland
                 </p>
-                <p className="flex items-center mb-6">
+                <p className="flex items-center mb-6 text-sm text-info-content">
                   <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-700 text-white rounded-full flex-shrink-0">
                     <svg
                       fill="none"
@@ -71,8 +73,8 @@ const PricingPage = () => {
                   </span>
                   Mixtape chillwave tumeric
                 </p>
-                <button className="btn btn-secondary flex items-center mt-auto w-full focus:outline-none rounded">
-                  Button
+                <button className="btn bg-info-content hover:bg-brandPrimary text-base-content flex mt-auto w-full focus:outline-none rounded-lg text-center">
+                  Buy now
                   <svg
                     fill="none"
                     stroke="currentColor"
@@ -90,21 +92,21 @@ const PricingPage = () => {
                 </p>
               </div>
             </div>
-            <div className="p-4">
-              <div className="p-6 rounded-lg border-2 border-gray-700 flex flex-col relative overflow-hidden">
-                <span className="bg-primary text-base-300 font-semibold px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">
+            <div className="p-4 mb-6">
+              <div className="p-6 rounded-lg flex flex-col shadow-2xl bg-white relative overflow-hidden">
+                <span className="bg-brandPrimary text-white font-semibold px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">
                   POPULAR
                 </span>
-                <h2 className="text-sm tracking-widest title-font mb-4 font-medium">
-                  PRO
+                <h2 className="text-xl text-info-content mb-4 font-medium">
+                  Pro
                 </h2>
-                <h3 className="text-4xl font-semibold pb-4 mb-4 border-b border-gray-700">
+                <h3 className="text-2xl text-info-content font-semibold pb-4 mb-4 border-b border-gray-400">
                   <span>$38</span>
-                  <span className="text-lg ml-1 font-normal text-gray-500">
+                  <span className="text-lg ml-1 font-normal text-gray-600">
                     /one-time
                   </span>
                 </h3>
-                <p className="flex items-center mb-2">
+                <p className="flex items-center mb-2 text-sm text-info-content">
                   <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-700 text-white rounded-full flex-shrink-0">
                     <svg
                       fill="none"
@@ -120,7 +122,7 @@ const PricingPage = () => {
                   </span>
                   Vexillologist pitchfork
                 </p>
-                <p className="flex items-center mb-2">
+                <p className="flex items-center mb-2 text-sm text-info-content">
                   <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-700 text-white rounded-full flex-shrink-0">
                     <svg
                       fill="none"
@@ -136,7 +138,7 @@ const PricingPage = () => {
                   </span>
                   Tumeric plaid portland
                 </p>
-                <p className="flex items-center mb-6">
+                <p className="flex items-center mb-6 text-sm text-info-content">
                   <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-700 text-white rounded-full flex-shrink-0">
                     <svg
                       fill="none"
@@ -152,8 +154,8 @@ const PricingPage = () => {
                   </span>
                   Mixtape chillwave tumeric
                 </p>
-                <button className="btn btn-primary text-base-300 flex items-center mt-auto w-full focus:outline-none rounded">
-                  Button
+                <button className="btn bg-info-content hover:bg-brandPrimary text-base-content flex mt-auto w-full focus:outline-none rounded-lg text-center">
+                  Buy now
                   <svg
                     fill="none"
                     stroke="currentColor"
@@ -174,7 +176,7 @@ const PricingPage = () => {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 export default PricingPage;
