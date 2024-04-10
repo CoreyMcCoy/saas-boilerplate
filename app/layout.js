@@ -1,4 +1,4 @@
-import { ClerkLoaded, ClerkLoading, ClerkProvider } from '@clerk/nextjs';
+import { ClerkProvider } from '@clerk/nextjs';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from './(components)/Navbar';
@@ -15,17 +15,10 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
       <html data-theme="dark" lang="en">
         <body className={inter.className}>
-          <ClerkLoading>
-            <h1 className="text-2xl mt-20 font-bold text-center mx-auto">
-              Loading...
-            </h1>
-          </ClerkLoading>
-          <ClerkLoaded>
-            <Navbar />
-            <main className="px-8 py-20 max-w-6xl text-center mx-auto">
-              {children}
-            </main>
-          </ClerkLoaded>
+          <Navbar />
+          <main className="px-8 py-20 max-w-6xl text-center mx-auto">
+            {children}
+          </main>
         </body>
       </html>
     </ClerkProvider>
