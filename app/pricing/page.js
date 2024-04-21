@@ -98,7 +98,7 @@ const PricingPage = () => {
         <dialog id="my_modal_2" className="modal text-center">
           <div className="modal-box h-2/5 flex flex-col justify-center items-center">
             <h3 className="font-medium mb-6">Please sign in.</h3>
-            <Link href="/login" className="btn btn-success w-72">
+            <Link href="/sign-in" className="btn btn-success w-72">
               Sign in
             </Link>
           </div>
