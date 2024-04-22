@@ -80,58 +80,56 @@ const ForgotPasswordPage = () => {
   }
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="p-8 rounded shadow-lg w-96">
-        <h1 className="text-3xl text-center font-semibold mb-8">
-          {successfulCreation && !complete ? 'New Password' : 'Forgot Password'}
-          ?
-        </h1>
-        <form onSubmit={!successfulCreation ? create : reset}>
-          {!successfulCreation && !complete && (
-            <>
-              <label htmlFor="email">
-                Enter your email address, and we'll help you reset it.
-              </label>
-              <input
-                className="input w-full mb-4 bg-slate-200 my-4"
-                type="email"
-                placeholder="e.g john@doe.com"
-                required
-              />
+    <div className="">
+      <h2 className="text-xl font-semibold mb-5">
+        {successfulCreation && !complete ? 'New Password' : 'Forgot Password'}?
+      </h2>
+      <form
+        onSubmit={!successfulCreation ? create : reset}
+        className="flex flex-col items-center"
+      >
+        {!successfulCreation && !complete && (
+          <>
+            <label htmlFor="email">
+              Enter your email address, and we'll help you reset it.
+            </label>
+            <input
+              className="input my-3"
+              type="email"
+              placeholder="e.g john@doe.com"
+              required
+            />
+            <button
+              type="submit"
+              className="btn bg-brandPrimary hover:bg-brandPrimary text-white w-60"
+            >
+              Send password reset code
+            </button>
+            {error && <p>{error}</p>}
+          </>
+        )}
 
-              <button className="btn btn-primary w-full mt-2">
-                Send password reset code
-              </button>
-              {error && <p>{error}</p>}
-            </>
-          )}
+        {successfulCreation && (
+          <>
+            <label htmlFor="password">
+              Enter the password reset code that was sent to your email
+            </label>
+            <input className="input mb-2" type="text" />
 
-          {successfulCreation && (
-            <>
-              <label htmlFor="password">
-                Enter the password reset code that was sent to your email
-              </label>
-              <input
-                className="input w-full mb-4 bg-slate-200 my-4"
-                type="text"
-              />
+            <label htmlFor="password">Enter your new password</label>
+            <input className="input mb-2" type="password" />
 
-              <label htmlFor="password">Enter your new password</label>
-              <input
-                className="input w-full mb-4 bg-slate-200 my-4"
-                type="password"
-              />
+            <button className="btn bg-brandPrimary hover:bg-brandPrimary text-white w-60">
+              Reset
+            </button>
+            {error && <p>{error}</p>}
+          </>
+        )}
 
-              <button className="btn btn-primary w-full mt-2">Reset</button>
-              {error && <p>{error}</p>}
-            </>
-          )}
-
-          {secondFactor && (
-            <p>2FA is required, but this UI does not handle that</p>
-          )}
-        </form>
-      </div>
+        {secondFactor && (
+          <p>2FA is required, but this UI does not handle that</p>
+        )}
+      </form>
     </div>
   );
 };

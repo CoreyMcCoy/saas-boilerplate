@@ -12,6 +12,9 @@ module.exports = {
         brandAccent: '#FF990A',
       },
     },
+    container: {
+      center: true,
+    },
   },
   plugins: [require('@tailwindcss/typography'), require('daisyui')],
 

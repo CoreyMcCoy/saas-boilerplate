@@ -3,17 +3,16 @@ import Link from 'next/link';
 
 export default function Page() {
   return (
-    <div className="md:w-4/6 flex flex-col items-center mx-auto">
+    <>
       <SignIn />
-      <div className="text-sm mt-4 flex mx-auto">
-        <p>Forgot Password?</p>
-        <Link
-          href="/forgot-password"
-          className="text-center text-secondary ml-2"
-        >
-          Reset Password
-        </Link>
+      <div className="mt-3">
+        <p>
+          Forgot Password?
+          <Link href="/forgot-password" className="ml-2 text-primary">
+            Reset Password
+          </Link>
+        </p>
       </div>
-    </div>
+    </>
   );
 }
