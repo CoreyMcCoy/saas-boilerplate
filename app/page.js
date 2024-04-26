@@ -8,8 +8,8 @@ export default function Home() {
     <>
       <h1 className="text-xl font-semibold mb-5">SaaS App Boilerplate</h1>
       <p className="">
-        This is a boilerplate application for building a SaaS application using
-        Next.js, React.js, Clerk, MongoDB, Tailwind CSS, and DaisyUI.
+        This is a boilerplate for building applications using Next.js, Clerk,
+        MongoDB, Stripe, Shadcn, and Tailwind CSS.
       </p>
     </>
   );

@@ -80,9 +80,9 @@ const ForgotPasswordPage = () => {
   }
 
   return (
-    <div className="">
-      <h2 className="text-xl font-semibold mb-5">
-        {successfulCreation && !complete ? 'New Password' : 'Forgot Password'}?
+    <div className="rounded-2xl bg-white shadow-2xl p-10 w-[400px]">
+      <h2 className="text-xl font-semibold">
+        {successfulCreation && !complete ? 'New Password' : 'Forgot Password'}
       </h2>
       <form
         onSubmit={!successfulCreation ? create : reset}
@@ -90,20 +90,20 @@ const ForgotPasswordPage = () => {
       >
         {!successfulCreation && !complete && (
           <>
-            <label htmlFor="email">
-              Enter your email address, and we'll help you reset it.
+            <label htmlFor="email" className="text-gray-500 mb-5">
+              we'll help you reset it.
             </label>
             <input
-              className="input my-3"
+              className="input input-bordered focus:border-blue-400 my-3 w-full"
               type="email"
               placeholder="e.g john@doe.com"
               required
             />
             <button
               type="submit"
-              className="btn bg-brandPrimary hover:bg-brandPrimary text-white w-60"
+              className="btn bg-brandPrimary hover:bg-brandPrimary uppercase text-xs text-white w-full mt-3"
             >
-              Send password reset code
+              Send reset code
             </button>
             {error && <p>{error}</p>}
           </>
@@ -111,16 +111,24 @@ const ForgotPasswordPage = () => {
 
         {successfulCreation && (
           <>
-            <label htmlFor="password">
+            <label htmlFor="password" className="text-gray-500 mb-5">
               Enter the password reset code that was sent to your email
             </label>
-            <input className="input mb-2" type="text" />
+            <input
+              className="input my-3 w-full input-bordered focus:border-blue-400"
+              type="text"
+            />
 
-            <label htmlFor="password">Enter your new password</label>
-            <input className="input mb-2" type="password" />
+            <label htmlFor="password" className="text-gray-500 mb-5">
+              Enter your new password
+            </label>
+            <input
+              className="input my-3 w-full input-bordered focus:border-blue-400"
+              type="password"
+            />
 
-            <button className="btn bg-brandPrimary hover:bg-brandPrimary text-white w-60">
-              Reset
+            <button className="btn bg-brandPrimary hover:bg-brandPrimary uppercase text-xs text-white w-full mt-3">
+              Reset Password
             </button>
             {error && <p>{error}</p>}
           </>
